@@ -1,0 +1,171 @@
+/* Базова палітра кольорів*/
+/* колір основного тексту, сірий #757575;*/
+/* вторинний, заголовки, чорний #2196F3 */
+/* акцентний колір, голубенький #2196F3 */
+
+/* section-title */
+:root {
+  --basic-white: #ffffff;
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --background-white: #f5f5f5;
+  --background-grey: #f5f4fa;
+}
+/* Загальне оформлення для сторінки */
+body {
+  background-color: var(--basic-white);
+  color: var(--primary-text-color);
+
+  background-color: var(--background-white);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  color: var(--accent-color);
+  text-decoration-line: none;
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+}
+
+.logo-dark {
+  color: var(--title-text-color);
+}
+
+.logo-light {
+  color: var(--basic-white);
+}
+
+/* Site nav */
+.site-nav .link {
+  color: var(--title-text-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+}
+/* Інтерактивний елемент має мати focus для користувачів, що не мають мишки */
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+
+/* contacts */
+address {
+  font-style: normal;
+}
+.phone,
+.mail,
+.location {
+  color: var(--primary-text-color);
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.header-contacts .phone,
+.header-contacts .mail {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.location {
+  color: var(--basic-white);
+}
+
+.phone:hover,
+.phone:focus,
+.mail:focus,
+.mail:hover,
+.location:focus,
+.location:hover {
+  color: var(--accent-color);
+}
+
+/* hero-title */
+
+.hero-title {
+  color: var(--basic-white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Section */
+.section-title {
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+}
+.section .text {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.section-link {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.project-title {
+  color: var(--title-text-color);
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.project-text {
+  line-height: 1.9;
+}
+/* Стилізація сторінки Портіоліо */
+/* Кнопки */
+.button {
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.order {
+  background-color: var(--accent-color);
+  color: var(--basic-white);
+
+  font-weight: 700;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+.buttons-list .button {
+  background-color: var(--background-grey);
+  line-height: 1.6;
+  letter-spacing: inherit;
+}
+
+.buttons-list .button:hover,
+.buttons-list .button:focus {
+  background-color: var(--accent-color);
+  color: var(--basic-white);
+}
