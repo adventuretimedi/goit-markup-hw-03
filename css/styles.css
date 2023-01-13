@@ -3,36 +3,71 @@
 /* вторинний, заголовки, чорний #2196F3 */
 /* акцентний колір, голубенький #2196F3 */
 
-/* section-title */
 :root {
   --basic-white: #ffffff;
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --background-white: #f5f5f5;
-  --background-grey: #f5f4fa;
+  --background-grey-buttons: #f5f4fa;
+  --background-grey: #2f303a;
+  --header-border-grey: #ECECEC;
+  --portfolio-cards-border:#EEEEEE;
 }
-/* Загальне оформлення для сторінки */
+/* ---------------------------------Загальне оформлення для сторінки--------------------------------- */
 body {
   background-color: var(--basic-white);
   color: var(--primary-text-color);
 
-  background-color: var(--background-white);
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 16px;
+}
+/* ---------------------------------СПІЛЬНІ КОНТЕЙНЕРИ----------------------------------------------- */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* -----------------------------------Спільне скидання стилів ---------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul {
   list-style: none;
 }
 
+/* --------------------------------------Header----------------------------------------------------- */
+
+header {
+  border-bottom: 1px solid var(--header-border-grey);
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+/* ---------------------------------------Логотип---------------------------------------------------- */
 .logo {
   color: var(--accent-color);
   text-decoration-line: none;
   font-family: Raleway;
+  font-weight: 700;
   font-size: 26px;
-  line-height: 1.2;
+  line-height: 1.17px;
   letter-spacing: 0.03em;
 }
 
@@ -44,16 +79,41 @@ ul {
   color: var(--basic-white);
 }
 
+/* .header-navigation .logo {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+} */
+
 /* Site nav */
+
+
+.header-navigation {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+/* not mandatory, for better UX */
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+  margin-bottom: 0px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.1;
   letter-spacing: 0.02em;
 }
-/* Інтерактивний елемент має мати focus для користувачів, що не мають мишки */
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
@@ -64,9 +124,26 @@ ul {
 }
 
 /* contacts */
-address {
-  font-style: normal;
+
+.head-contacts {
+  display: block;
+  display: flex;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: 344px;
 }
+
+.head-contacts .phone,
+.head-contacts .mail {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+/* це кращий варік ніж nth child у випадку нововведень */
+.head-contacts .item + .item {
+margin-left: 50px;
+}
+
 .phone,
 .mail,
 .location {
@@ -76,12 +153,13 @@ address {
   line-height: 1.7;
 }
 
-.header-contacts .phone,
+/* .header-contacts .phone,
 .header-contacts .mail {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
-}
+} */
+
 
 .location {
   color: var(--basic-white);
@@ -96,31 +174,53 @@ address {
   color: var(--accent-color);
 }
 
-/* hero-title */
+/* ---------------------------------------- hero---------------------------------------------------- */
+
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+  text-align: center;
+
+  background-color: var(--background-grey);
+}
 
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
   color: var(--basic-white);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   text-transform: uppercase;
 }
+/* -----------------------------------------Button-------------------------------------------- */
+.order {
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  padding: 10px 32px;
 
-/* Section */
-.section-title {
-  color: var(--title-text-color);
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
-}
+  background-color: var(--accent-color);
+  color: var(--basic-white);
+  border: none;
 
-.section-subtitle {
-  color: var(--title-text-color);
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
 }
+/* ------------------------------------------Sections block -------------------------------------*/
+
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+
 .section .text {
   font-size: 14px;
   line-height: 1.7;
@@ -129,6 +229,64 @@ address {
 .section-link {
   color: var(--primary-text-color);
   text-decoration: none;
+}
+
+.section-title {
+  margin-top: 0px;
+  margin-bottom: 50px;
+
+  color: var(--title-text-color);
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* -------------------------------------------Section Advantages--------------------------------------*/
+/* .advantages {
+  padding-top: 94px;
+  padding-bottom: 94px;
+} */
+
+.advantages-list {
+  display: flex;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+  margin: 0px;
+}
+
+
+.advantage-name,
+.person-name {
+  margin-bottom: 10px;
+
+  color: var(--title-text-color);
+}
+
+.advantage-name {
+  /* padding-top: 94px; */
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.advantages-title,
+.portfolio-hidden-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.advantages-text {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .project-title {
@@ -140,7 +298,47 @@ address {
 .project-text {
   line-height: 1.9;
 }
-/* Стилізація сторінки Портіоліо */
+
+/* -----------------------------------Section Work (what we do)-------------------------------- */
+.work {
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+    margin: 0px
+}
+
+.work-tittle > .work {
+  /* margin-bottom: 50px; */
+}
+
+/* --------------------------------------Section Team------------------------------ */
+
+
+.team{
+  display: flex;
+  padding: 0;
+  /* margin: 15px; */
+  gap: 30px;
+  flex-basis: calc((100% - 90)/4) 
+}
+
+.person-card {
+  text-align: center;
+  padding-bottom: 30px;
+  background-color: var(--basic-white);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+/* 
+.team-position {
+  padding-bottom: 30px;
+} */
+.person-name {
+  margin-top: 30px;
+  line-height: 1.2;
+}
+/* ---------------------------------------П О Р Т Ф О Л І О ----------------------------------*/
 /* Кнопки */
 .button {
   cursor: pointer;
@@ -148,20 +346,32 @@ address {
   font-size: inherit;
 }
 
-.order {
-  background-color: var(--accent-color);
-  color: var(--basic-white);
 
-  font-weight: 700;
-  line-height: 1.9;
-  letter-spacing: 0.06em;
-  text-align: center;
-}
+/* Кнопки сторінки портфоліо ! Примітка ! не збігаються розміри кнопок на кілька пікселів.*/
 
 .buttons-list .button {
-  background-color: var(--background-grey);
+  /* display: inline-block;
+  border-radius: 4px; */
+  display: block;
+  margin: auto;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 32px;
+  text-align: center;
+  padding: 6px 22px;
+  text-align: center;
+
+  background-color: var(--background-grey-buttons);
   line-height: 1.6;
   letter-spacing: inherit;
+}
+
+.buttons-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+  gap: 8px;
+
 }
 
 .buttons-list .button:hover,
@@ -169,3 +379,42 @@ address {
   background-color: var(--accent-color);
   color: var(--basic-white);
 }
+
+.project-set {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: calc((100% - 60px) / 4);
+
+}
+
+.project-card {
+  width: 370px;
+  height: 404px;
+  border: 1px solid var(--portfolio-cards-border);
+}
+
+.project-text-block{
+  padding: 20px 24px;
+}
+
+/* -----------------------Footer------------------------------- */
+.footer {
+  background-color: var(--background-grey);
+}
+.container-footer {
+  
+  padding-top: 60px;
+  padding-bottom: 60px;
+  
+}
+
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding-left: 0;
+  margin-top: 20px;
+
+  font-style: normal;
+}
+
