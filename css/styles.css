@@ -54,8 +54,7 @@ header {
 .container-header {
   display: flex;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
 }
 
 .header-navigation {
@@ -144,7 +143,6 @@ margin-left: 50px;
 .phone,
 .mail,
 .location {
-  color: var(--primary-text-color);
   text-decoration: none;
   font-size: 14px;
   line-height: 1.7;
@@ -152,6 +150,11 @@ margin-left: 50px;
 
 .location {
   color: var(--basic-white);
+}
+
+.phone, 
+.mail {
+  color: var(--footer-contacts-soft-grey);
 }
 
 .phone:hover,
@@ -243,7 +246,6 @@ margin-left: 50px;
 .advantage-name,
 .person-name {
   margin-bottom: 10px;
-
   color: var(--title-text-color);
 }
 
@@ -327,6 +329,7 @@ background-color: var(--background-grey-buttons);
   margin-bottom: 10px;
 
   font-weight: 500;
+  font-size: 16px;
   line-height: 1.2;
 }
 /* ---------------------------------------P O R T F O L I O ---------------------------------------*/
@@ -342,16 +345,16 @@ background-color: var(--background-grey-buttons);
   margin: auto;
   border-radius: 4px;
   border: none;
-  padding: 10px 32px;
-  text-align: center;
   padding: 6px 22px;
   text-align: center;
+
 
   background-color: var(--background-grey-buttons);
   line-height: 1.6;
   letter-spacing: inherit;
+  font-weight: 500;
 }
-/* Не вдається поставити margin bottom: 50px */
+
 .buttons-list {
   display: flex;
   justify-content: center;
@@ -406,6 +409,5 @@ background-color: var(--background-grey-buttons);
   margin-top: 20px;
 
   font-style: normal;
-  color: var(--footer-contacts-soft-grey);
 }
 
