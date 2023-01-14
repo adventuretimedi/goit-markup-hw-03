@@ -9,6 +9,7 @@
   --background-grey: #2f303a;
   --header-border-grey: #ECECEC;
   --portfolio-cards-border:#EEEEEE;
+  --footer-contacts-soft-grey: rgba(255, 255, 255, 0.6);
 }
 /* --------------------------------Загальне оформлення для сторінки--------------------------------- */
 body {
@@ -65,6 +66,8 @@ header {
 .site-nav {
   display: flex;
   align-items: center;
+  padding: 0;
+  margin-left: 93px;
 }
 
 .site-nav .item:not(:last-child) {
@@ -74,14 +77,14 @@ header {
 
 .site-nav .link {
   display: block;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
 
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
 }
@@ -122,9 +125,9 @@ header {
 .head-contacts {
   display: block;
   display: flex;
-  padding-left: 0px;
-  margin-right: auto;
-  margin-left: 344px;
+  padding: 0;
+  margin-left: auto;
+  font-size: 14px;
 }
 
 .head-contacts .phone,
@@ -288,6 +291,13 @@ margin-left: 50px;
     margin: 0px
 }
 
+.work-section {
+  padding-top: 0;
+}
+
+img {
+  display: block;
+}
 /* --------------------------------------Section Team------------------------------ */
 
 .team{
@@ -297,16 +307,26 @@ margin-left: 50px;
   flex-basis: calc((100% - 90)/4) 
 }
 
-.person-card {
-  text-align: center;
-  padding-bottom: 30px;
+.team-section {
+background-color: var(--background-grey-buttons);
+}
+
+.person-list {
   background-color: var(--basic-white);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
+.person-card {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
 .person-name {
-  margin-top: 30px;
+  margin-bottom: 10px;
+
+  font-weight: 500;
   line-height: 1.2;
 }
 /* ---------------------------------------P O R T F O L I O ---------------------------------------*/
@@ -331,11 +351,12 @@ margin-left: 50px;
   line-height: 1.6;
   letter-spacing: inherit;
 }
-
+/* Не вдається поставити margin bottom: 50px */
 .buttons-list {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
+  padding: 0;
+  margin-bottom: 50px;
   gap: 8px;
 
 }
@@ -361,6 +382,10 @@ margin-left: 50px;
   border: 1px solid var(--portfolio-cards-border);
 }
 
+.project-title {
+  margin-bottom: 4px;
+}
+
 .project-text-block{
   padding: 20px 24px;
 }
@@ -369,12 +394,8 @@ margin-left: 50px;
 
 .footer {
   background-color: var(--background-grey);
-}
-
-.container-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  
 }
 
 .footer-contacts {
@@ -385,5 +406,6 @@ margin-left: 50px;
   margin-top: 20px;
 
   font-style: normal;
+  color: var(--footer-contacts-soft-grey);
 }
 
