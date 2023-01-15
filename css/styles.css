@@ -8,8 +8,11 @@
   --background-grey-buttons: #f5f4fa;
   --background-grey: #2f303a;
   --header-border-grey: #ECECEC;
-  --portfolio-cards-border:#EEEEEE;
+  --portfolio-cards-border: #EEEEEE;
   --footer-contacts-soft-grey: rgba(255, 255, 255, 0.6);
+  --hero-gradient: linear-gradient(to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4));
 }
 /* --------------------------------Загальне оформлення для сторінки--------------------------------- */
 body {
@@ -102,7 +105,7 @@ header {
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.17px;
+  line-height: 1.17;
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
@@ -134,10 +137,11 @@ header {
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
-.head-contacts .item + .item {
-margin-left: 50px;
+.head-contacts .item+.item {
+  margin-left: 50px;
 }
 
 .phone,
@@ -152,7 +156,7 @@ margin-left: 50px;
   color: var(--basic-white);
 }
 
-.phone, 
+.phone,
 .mail {
   color: var(--footer-contacts-soft-grey);
 }
@@ -160,12 +164,9 @@ margin-left: 50px;
 .phone:hover,
 .phone:focus,
 .mail:focus,
-.mail:hover,
-.location:focus,
-.location:hover {
+.mail:hover {
   color: var(--accent-color);
 }
-
 /* ----------------------------------------- hero---------------------------------------------------- */
 
 .hero {
@@ -174,6 +175,15 @@ margin-left: 50px;
   text-align: center;
 
   background-color: var(--background-grey);
+  background-image: var(--hero-gradient),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
+  height: 600px;
+  margin: auto;
+
 }
 
 .hero-title {
@@ -390,7 +400,10 @@ background-color: var(--background-grey-buttons);
 }
 
 .project-text-block{
+  
+  border: 1px solid var(--portfolio-cards-border);
   padding: 20px 24px;
+  border-top: none;
 }
 
 /* --------------------------------------Footer--------------------------------------------------- */
